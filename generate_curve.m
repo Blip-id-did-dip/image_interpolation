@@ -1,6 +1,8 @@
 function [curve] = generate_curve(mask)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+%GENERATE_CURVE Makes a parametric curve outlining the region designated
+%by mask
+%   The Parametric curve consists of a list of ordered points along the
+%   curve.
 
 MASK_HIGH = 1;
 
@@ -70,7 +72,7 @@ while (current_y ~= start_y || current_x ~= start_x)
 
 end
 
-curve = curve(1:curve_ind-1,:);
+curve = curve(1:curve_ind-2,:);
 
 
 
